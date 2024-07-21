@@ -1,24 +1,25 @@
 var qntd_derrotas = 30
 var qntd_vitorias = 100
 var saldoRanqueado = qntd_vitorias - qntd_derrotas
+var nivel = " "
 
 function ranking(){
     if (saldoRanqueado <= 10){
-        console.log("Ferro")
+        nivel = "Ferro"
     }else if (saldoRanqueado >= 11 && saldoRanqueado <= 20){
-        console.log("Bronze")
+        nivel = "Bronze"
     }else if (saldoRanqueado >= 21 && saldoRanqueado <= 50){
-        console.log("Prata")
+        nivel = "Prata"
     }else if (saldoRanqueado >= 51 && saldoRanqueado <= 80){
-        console.log("Ouro")
+        nivel = "Ouro"
     }else if (saldoRanqueado >= 81 && saldoRanqueado <= 90){
-        console.log("Diamante")
+        nivel = "Diamante"
     }else if (saldoRanqueado >= 91 && saldoRanqueado <= 100){
-        console.log("Lendário")
+        nivel = "Lendário"
     }else {
-        console.log("Imortal")
+        nivel = "Imortal"
     }
     
 }
-
-console.log(`O Héroi tem saldo de ${saldoRanqueado} está no nível de ${ranking}`)
+const calculadora = ranking()
+console.log(`O Héroi tem saldo de ${saldoRanqueado} está no nível de ${nivel}.`)
